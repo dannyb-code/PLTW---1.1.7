@@ -14,17 +14,17 @@ for s in turtle_shapes:
   t = trtl.Turtle(shape=s)
   my_turtles.append(t)
 
-#  
+#  starting point for turtle
 startx = 0
 starty = 0
 
-#
+# where the turtle is going to go
 for t in my_turtles:
   t.goto(startx, starty)
   t.right(45)     
   t.forward(50)
 
-#	
+#	how many/fast place the turtle is going to go
   startx = startx + 50
   starty = starty + 50
 
