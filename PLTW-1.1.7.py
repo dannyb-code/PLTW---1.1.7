@@ -11,7 +11,7 @@ turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
 turtle_colors = ["red", "blue", "green", "orange", "purple", "gold"]
 
 for s in turtle_shapes:
-  t = trtl.Turtle(shape=s)
+  t = trtl.Turtle()
   my_turtles.append(t)
 
 #  starting point for turtle
