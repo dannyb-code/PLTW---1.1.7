@@ -1,32 +1,31 @@
-# CODE TO COPY
-#   a117_traversing_turtles.py
-#   Add code to make turtles move in a circle and change colors.
 import turtle as trtl
-
-# create an empty list of turtles
 my_turtles = []
 
-# use interesting shapes and colors
 turtle_shapes = ["arrow", "turtle", "circle", "square", "triangle", "classic"]
 turtle_colors = ["red", "blue", "green", "orange", "purple", "gold"]
 
-for s in turtle_shapes:
-  t = trtl.Turtle()
-  my_turtles.append(t)
+for i in range(len(turtle_shapes)):
+    t = trtl.Turtle()
+    t.shape(turtle_shapes[i])
+    t.color(turtle_colors[i])
+    my_turtles.append(t)
 
-#  starting point for turtle
-startx = 0
-starty = 0
+positions = [
+    (0, -110),
+    (120, -80),
+    (130, 0),
+    (90, 90),
+    (0, 120),
+    (-50, 100)
+]
 
-# where the turtle is going to go
-for t in my_turtles:
-  t.goto(startx, starty)
-  t.right(45)     
-  t.forward(50)
+for i in range(len(my_turtles)):
+    my_turtles[i].penup()
+    my_turtles[i].goto(positions[i])
 
-#	how many/fast place the turtle is going to go
-  startx = startx + 50
-  starty = starty + 50
+for i in range(len(my_turtles)-1):
+    my_turtles[i].pendown()
+    my_turtles[i].goto(positions[i+1])
 
 wn = trtl.Screen()
 wn.mainloop()
